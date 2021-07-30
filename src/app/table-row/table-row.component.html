@@ -1,0 +1,17 @@
+<tr>
+    <th> Item </th>
+    <th> Unit </th>
+    <th> Price </th>
+    <th> Total </th>
+
+    <th>Edit</th>
+    <th>Delete</th>
+</tr>
+<tr *ngFor="let index of userData">
+    <th>{{index.item}}</th>
+    <th>{{index.unit}}</th>
+    <th>{{index.price}}</th>
+    <th>{{index.unit*index.price}}</th>
+    <th><button type="button" #edit (click)="editElement($event.target,index)">edit</button></th>
+    <th><button type="button" (click)="delteElement($event.target,index)">delete</button></th>
+</tr>
